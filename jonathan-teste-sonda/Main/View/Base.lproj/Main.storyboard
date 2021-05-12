@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main Collection View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="Main" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="MainCollectionViewController" customModule="jonathan_teste_sonda" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleAspectFit" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="MUG-WV-I3o">
+                                <rect key="frame" x="0.0" y="567" width="375" height="100"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" id="Gcz-Ta-jrk">
+                                        <rect key="frame" x="0.0" y="0.0" width="125" height="100"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="12"/>
+                                        <color key="tintColor" systemColor="systemPinkColor"/>
+                                        <inset key="titleEdgeInsets" minX="-20" minY="50" maxX="20" maxY="0.0"/>
+                                        <inset key="imageEdgeInsets" minX="20" minY="0.0" maxX="-30" maxY="40"/>
+                                        <state key="normal" title="Feed de imagens" image="photo.on.rectangle" catalog="system">
+                                            <color key="titleColor" systemColor="systemPinkColor"/>
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="29"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" id="Bw8-ZU-bQW">
+                                        <rect key="frame" x="125" y="0.0" width="125" height="100"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="12"/>
+                                        <color key="tintColor" systemColor="systemPinkColor"/>
+                                        <inset key="titleEdgeInsets" minX="-20" minY="50" maxX="20" maxY="0.0"/>
+                                        <inset key="imageEdgeInsets" minX="20" minY="0.0" maxX="-30" maxY="40"/>
+                                        <state key="normal" title="Tirar foto" image="camera.fill" catalog="system">
+                                            <color key="titleColor" systemColor="systemPinkColor"/>
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="29"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="popCamera:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LAK-tv-Cyy"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" id="3Ka-xT-2yG">
+                                        <rect key="frame" x="250" y="0.0" width="125" height="100"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="12"/>
+                                        <color key="tintColor" systemColor="systemPinkColor"/>
+                                        <inset key="titleEdgeInsets" minX="0.0" minY="50" maxX="20" maxY="0.0"/>
+                                        <inset key="imageEdgeInsets" minX="20" minY="10" maxX="-20" maxY="40"/>
+                                        <state key="normal" title="Mais..." image="circle.grid.2x2.fill" catalog="system">
+                                            <color key="titleColor" systemColor="systemPinkColor"/>
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="29"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="23W-do-QsD" kind="show" id="EXJ-ZX-mMZ"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="n3H-j1-cEr"/>
+                                </constraints>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Feed de imagens" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ddh-qm-cNz">
+                                <rect key="frame" x="95.5" y="30" width="184" height="31.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="26"/>
+                                <color key="textColor" systemColor="systemPinkColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="2xo-e1-zJE">
+                                <rect key="frame" x="0.0" y="81.5" width="375" height="475.5"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Fej-gg-nkd">
+                                    <size key="itemSize" width="159" height="222"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="albumCell" id="qB5-EE-XRY" customClass="MainCollectionViewCell" customModule="jonathan_teste_sonda" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="159" height="222"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="AD0-wy-199">
+                                            <rect key="frame" x="0.0" y="0.0" width="159" height="222"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l4K-8M-ca9">
+                                                    <rect key="frame" x="10" y="5" width="139" height="68"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="AH9-KI-phG">
+                                                    <rect key="frame" x="10" y="82" width="139" height="130"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="130" id="H2p-eH-vjH"/>
+                                                        <constraint firstAttribute="height" constant="130" id="xvS-5C-3k7"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="AH9-KI-phG" firstAttribute="top" secondItem="l4K-8M-ca9" secondAttribute="bottom" constant="9" id="5eb-u6-4Yj"/>
+                                                <constraint firstItem="l4K-8M-ca9" firstAttribute="top" secondItem="AD0-wy-199" secondAttribute="top" constant="5" id="Bwg-z9-3EF"/>
+                                                <constraint firstAttribute="trailing" secondItem="l4K-8M-ca9" secondAttribute="trailing" constant="10" id="WiQ-YF-Xoq"/>
+                                                <constraint firstItem="l4K-8M-ca9" firstAttribute="leading" secondItem="AD0-wy-199" secondAttribute="leading" constant="10" id="Xve-av-ZBt"/>
+                                                <constraint firstAttribute="trailing" secondItem="AH9-KI-phG" secondAttribute="trailing" constant="10" id="dGp-sy-mDX"/>
+                                                <constraint firstAttribute="bottom" secondItem="AH9-KI-phG" secondAttribute="bottom" constant="10" id="jtX-7j-GbK"/>
+                                                <constraint firstItem="AH9-KI-phG" firstAttribute="leading" secondItem="AD0-wy-199" secondAttribute="leading" constant="10" id="oaA-Nr-hJD"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="159" height="222"/>
+                                        <connections>
+                                            <outlet property="albumImage" destination="AH9-KI-phG" id="uLl-Gf-OeS"/>
+                                            <outlet property="albumTitle" destination="l4K-8M-ca9" id="MBE-eV-LPt"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="2xo-e1-zJE" firstAttribute="top" secondItem="ddh-qm-cNz" secondAttribute="bottom" constant="20" id="Bss-7n-9Fj"/>
+                            <constraint firstItem="2xo-e1-zJE" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Lli-7z-Hw8"/>
+                            <constraint firstItem="2xo-e1-zJE" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="TIH-dK-QyO"/>
+                            <constraint firstItem="ddh-qm-cNz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Waz-63-AYf"/>
+                            <constraint firstItem="ddh-qm-cNz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="dwS-s0-iFx"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="MUG-WV-I3o" secondAttribute="bottom" id="eTH-B0-Oe2"/>
+                            <constraint firstItem="MUG-WV-I3o" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="rH3-q3-pja"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="MUG-WV-I3o" secondAttribute="trailing" id="vPW-YY-XWl"/>
+                            <constraint firstItem="MUG-WV-I3o" firstAttribute="top" secondItem="2xo-e1-zJE" secondAttribute="bottom" constant="10" id="y8C-Fh-7h8"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mainCollectionView" destination="2xo-e1-zJE" id="nlt-NX-Lcf"/>
+                        <outlet property="photoButton" destination="Bw8-ZU-bQW" id="UDi-vf-jw1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140" y="133.5832083958021"/>
+        </scene>
+        <!--More View Controller-->
+        <scene sceneID="Tim-vw-mbK">
+            <objects>
+                <viewController storyboardIdentifier="More" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="23W-do-QsD" customClass="MoreViewController" customModule="jonathan_teste_sonda" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uxg-4J-67m">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleAspectFit" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="0P0-bg-fuK">
+                                <rect key="frame" x="0.0" y="567" width="375" height="100"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" id="NAt-Q2-dB1">
+                                        <rect key="frame" x="0.0" y="0.0" width="125" height="100"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="12"/>
+                                        <color key="tintColor" systemColor="systemPinkColor"/>
+                                        <inset key="titleEdgeInsets" minX="-20" minY="50" maxX="20" maxY="0.0"/>
+                                        <inset key="imageEdgeInsets" minX="20" minY="0.0" maxX="-30" maxY="40"/>
+                                        <state key="normal" title="Feed de imagens" image="photo.on.rectangle" catalog="system">
+                                            <color key="titleColor" systemColor="systemPinkColor"/>
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="29"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="showFeed:" destination="23W-do-QsD" eventType="touchUpInside" id="hIa-HY-bkw"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" id="oBX-mb-zKb">
+                                        <rect key="frame" x="125" y="0.0" width="125" height="100"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="12"/>
+                                        <color key="tintColor" systemColor="systemPinkColor"/>
+                                        <inset key="titleEdgeInsets" minX="-20" minY="50" maxX="20" maxY="0.0"/>
+                                        <inset key="imageEdgeInsets" minX="20" minY="0.0" maxX="-30" maxY="40"/>
+                                        <state key="normal" title="Tirar foto" image="camera.fill" catalog="system">
+                                            <color key="titleColor" systemColor="systemPinkColor"/>
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="29"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="popCamera:" destination="23W-do-QsD" eventType="touchUpInside" id="rEf-nw-6qd"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" id="KJ0-oj-B6J">
+                                        <rect key="frame" x="250" y="0.0" width="125" height="100"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="12"/>
+                                        <color key="tintColor" systemColor="systemPinkColor"/>
+                                        <inset key="titleEdgeInsets" minX="0.0" minY="50" maxX="20" maxY="0.0"/>
+                                        <inset key="imageEdgeInsets" minX="20" minY="10" maxX="-20" maxY="40"/>
+                                        <state key="normal" title="Mais..." image="circle.grid.2x2.fill" catalog="system">
+                                            <color key="titleColor" systemColor="systemPinkColor"/>
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="29"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="JSS-M4-ZkV"/>
+                                </constraints>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mais" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vnL-f2-MWs">
+                                <rect key="frame" x="162.5" y="30" width="50" height="31.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="26"/>
+                                <color key="textColor" systemColor="systemPinkColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Teste técnico CTIS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fn3-ve-AQD">
+                                <rect key="frame" x="117.5" y="81.5" width="140" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                                <color key="textColor" systemColor="systemPinkColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="versão 1.0.0(n;umero da build 10)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f0C-Ub-Sjc">
+                                <rect key="frame" x="40" y="122" width="295" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                                <color key="textColor" systemColor="systemPinkColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ssv-WZ-A58">
+                                <rect key="frame" x="80" y="162.5" width="215" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="dCS-Qk-J0m"/>
+                                </constraints>
+                                <color key="tintColor" systemColor="systemPinkColor"/>
+                                <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="30" maxY="0.0"/>
+                                <inset key="titleEdgeInsets" minX="30" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="Sair" image="return" catalog="system">
+                                    <color key="titleColor" systemColor="systemPinkColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="alertQuit:" destination="23W-do-QsD" eventType="touchUpInside" id="hTq-sq-FLt"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="31L-x3-4Mz"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ssv-WZ-A58" firstAttribute="leading" secondItem="31L-x3-4Mz" secondAttribute="leading" constant="80" id="3d1-eB-sDc"/>
+                            <constraint firstItem="31L-x3-4Mz" firstAttribute="trailing" secondItem="f0C-Ub-Sjc" secondAttribute="trailing" constant="40" id="6si-I0-P5m"/>
+                            <constraint firstItem="f0C-Ub-Sjc" firstAttribute="leading" secondItem="31L-x3-4Mz" secondAttribute="leading" constant="40" id="NRs-ed-Pv1"/>
+                            <constraint firstItem="vnL-f2-MWs" firstAttribute="centerX" secondItem="uxg-4J-67m" secondAttribute="centerX" id="RTG-A5-4Nc"/>
+                            <constraint firstItem="0P0-bg-fuK" firstAttribute="leading" secondItem="31L-x3-4Mz" secondAttribute="leading" id="Tei-BT-4xC"/>
+                            <constraint firstItem="ssv-WZ-A58" firstAttribute="top" secondItem="f0C-Ub-Sjc" secondAttribute="bottom" constant="20" id="WCZ-zL-RnC"/>
+                            <constraint firstItem="31L-x3-4Mz" firstAttribute="trailing" secondItem="0P0-bg-fuK" secondAttribute="trailing" id="awR-q4-bFu"/>
+                            <constraint firstItem="31L-x3-4Mz" firstAttribute="trailing" secondItem="ssv-WZ-A58" secondAttribute="trailing" constant="80" id="c7G-mt-lrs"/>
+                            <constraint firstItem="fn3-ve-AQD" firstAttribute="centerX" secondItem="uxg-4J-67m" secondAttribute="centerX" id="myL-a8-c09"/>
+                            <constraint firstItem="vnL-f2-MWs" firstAttribute="top" secondItem="31L-x3-4Mz" secondAttribute="top" constant="30" id="pmX-2Q-VCk"/>
+                            <constraint firstItem="fn3-ve-AQD" firstAttribute="top" secondItem="vnL-f2-MWs" secondAttribute="bottom" constant="20" id="q4f-XZ-mOV"/>
+                            <constraint firstItem="31L-x3-4Mz" firstAttribute="bottom" secondItem="0P0-bg-fuK" secondAttribute="bottom" id="tId-9y-XIS"/>
+                            <constraint firstItem="f0C-Ub-Sjc" firstAttribute="top" secondItem="fn3-ve-AQD" secondAttribute="bottom" constant="20" id="wsP-uz-Ruq"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="kce-Ar-rPX"/>
+                    <connections>
+                        <outlet property="versionLabel" destination="f0C-Ub-Sjc" id="LCX-wp-FVP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="I2P-fz-ymF" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="874" y="134"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="camera.fill" catalog="system" width="128" height="94"/>
+        <image name="circle.grid.2x2.fill" catalog="system" width="128" height="112"/>
+        <image name="photo.on.rectangle" catalog="system" width="128" height="96"/>
+        <image name="return" catalog="system" width="128" height="101"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

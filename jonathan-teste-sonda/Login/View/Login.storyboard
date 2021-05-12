@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Login-->
+        <scene sceneID="Uk8-pm-Glb">
+            <objects>
+                <viewController storyboardIdentifier="Login" title="Login" id="WDd-b2-d6O" customClass="LoginViewController" customModule="jonathan_teste_sonda" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oPK-6w-Eup">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pv5-aT-BYi">
+                                <rect key="frame" x="30" y="300" width="315" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Para acessar o app informe seu e-mail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HRd-4b-0i2">
+                                <rect key="frame" x="46.5" y="269" width="282" height="21"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Senha" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aUy-x1-dla">
+                                <rect key="frame" x="30" y="425" width="315" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Agora digite sua senha" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xnc-EI-zWE">
+                                <rect key="frame" x="103" y="394" width="169" height="21"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JL9-9j-psR">
+                                <rect key="frame" x="0.0" y="607" width="375" height="60"/>
+                                <color key="backgroundColor" systemColor="systemPinkColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="B5v-fA-27n"/>
+                                </constraints>
+                                <state key="normal" title="ACESSAR">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="login:" destination="WDd-b2-d6O" eventType="touchUpInside" id="xYA-VR-ar0"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="insta-logo" translatesAutoresizingMaskIntoConstraints="NO" id="Vy6-7K-60w">
+                                <rect key="frame" x="93" y="20" width="189" height="189"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="189" id="220-mr-zhP"/>
+                                    <constraint firstAttribute="width" constant="189" id="UeQ-OD-wjd"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="yEl-sE-zjo"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="JL9-9j-psR" firstAttribute="leading" secondItem="yEl-sE-zjo" secondAttribute="leading" id="0fF-nU-6l9"/>
+                            <constraint firstItem="HRd-4b-0i2" firstAttribute="top" secondItem="Vy6-7K-60w" secondAttribute="bottom" constant="60" id="211-rd-DIb"/>
+                            <constraint firstItem="yEl-sE-zjo" firstAttribute="bottom" secondItem="JL9-9j-psR" secondAttribute="bottom" id="KQQ-O9-h0u"/>
+                            <constraint firstItem="aUy-x1-dla" firstAttribute="top" secondItem="xnc-EI-zWE" secondAttribute="bottom" constant="10" id="LR1-JW-kSu"/>
+                            <constraint firstItem="aUy-x1-dla" firstAttribute="leading" secondItem="yEl-sE-zjo" secondAttribute="leading" constant="30" id="OHg-dC-sgN"/>
+                            <constraint firstItem="Vy6-7K-60w" firstAttribute="centerX" secondItem="oPK-6w-Eup" secondAttribute="centerX" id="RzV-iy-xKH"/>
+                            <constraint firstItem="xnc-EI-zWE" firstAttribute="centerX" secondItem="oPK-6w-Eup" secondAttribute="centerX" id="XXX-9S-g8U"/>
+                            <constraint firstItem="yEl-sE-zjo" firstAttribute="trailing" secondItem="aUy-x1-dla" secondAttribute="trailing" constant="30" id="ZMM-1U-YpI"/>
+                            <constraint firstItem="pv5-aT-BYi" firstAttribute="leading" secondItem="yEl-sE-zjo" secondAttribute="leading" constant="30" id="aQG-CY-He8"/>
+                            <constraint firstItem="Vy6-7K-60w" firstAttribute="top" secondItem="yEl-sE-zjo" secondAttribute="top" constant="20" id="bzJ-No-7IZ"/>
+                            <constraint firstItem="yEl-sE-zjo" firstAttribute="trailing" secondItem="JL9-9j-psR" secondAttribute="trailing" id="dr1-3z-g28"/>
+                            <constraint firstItem="pv5-aT-BYi" firstAttribute="top" secondItem="HRd-4b-0i2" secondAttribute="bottom" constant="10" id="eGG-w0-TgO"/>
+                            <constraint firstItem="yEl-sE-zjo" firstAttribute="trailing" secondItem="pv5-aT-BYi" secondAttribute="trailing" constant="30" id="pAE-oK-MGE"/>
+                            <constraint firstItem="xnc-EI-zWE" firstAttribute="top" secondItem="pv5-aT-BYi" secondAttribute="bottom" constant="60" id="s4Q-z0-LYo"/>
+                            <constraint firstItem="HRd-4b-0i2" firstAttribute="centerX" secondItem="oPK-6w-Eup" secondAttribute="centerX" id="zki-mK-Y06"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="loginTextfield" destination="pv5-aT-BYi" id="f54-dt-XbY"/>
+                        <outlet property="passwordTextfield" destination="aUy-x1-dla" id="LDd-wO-WRi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="exz-nx-Xz5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="418.84057971014494" y="51.5625"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="insta-logo" width="640" height="640"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
